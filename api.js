@@ -1,6 +1,7 @@
 const express = require('express');
 const user = require('./controllers/user')
 const table = require('./controllers/table')
+const article = require('./controllers/article')
 const global = require('./controllers/global')
 
 
@@ -19,6 +20,8 @@ module.exports = function (parent) {
     app.get('/table/list', table.getList)
 
 
+    //article模块
+    app.post('/article/create', article.create)
 
     parent.use(app)
 }
