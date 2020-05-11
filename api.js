@@ -3,6 +3,7 @@ const user = require('./controllers/user')
 const table = require('./controllers/table')
 const article = require('./controllers/article')
 const global = require('./controllers/global')
+const multer = require('multer')
 
 
 module.exports = function (parent) {
@@ -22,6 +23,9 @@ module.exports = function (parent) {
 
     //article模块
     app.post('/article/create', article.create)
+
+    const upload = multer({ dest: './public/uploads' })
+    app.post('/article/imgUpload', upload.array('file', 10), article.imgUpload)
 
     parent.use(app)
 }
