@@ -11,12 +11,11 @@ exports.generate = function (Info) {
 
 exports.verify = function (token) {
   let res;
-  jwt.verify(token, secret, function (err, data) {
+  return jwt.verify(token, secret, function (err, data) {
     if (err) {
-      res = false;
+      return { res: false };
     } else {
-      res = true;
+      return { res: true, data };
     }
   });
-  return res;
 };
