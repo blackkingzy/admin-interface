@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 
 // Option 1: Passing parameters separately
 const sequelize = new Sequelize("mysql", "zhangyue", "zY1003975792.", {
-  host: "49.235.8.43",
+  host: "localhost",
   dialect: "mysql",
   pool: {
     max: 5, // 连接池最大连接数量

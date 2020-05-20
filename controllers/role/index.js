@@ -1,3 +1,35 @@
+exports.add = (req, res, next) => {
+    // body中的key值没用，不用存
+    console.log(req.body)
+    res.send({
+        code: 20000,
+        msg: '添加成功'
+    })
+}
+
+exports.update = (req, res, next) => {
+    // body中的key值没用，不用存
+    console.log(req.params)
+    console.log(req.body)
+    res.send({
+        code: 20000,
+        msg: '添加成功'
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exports.getRoutes = function (req, res, next) {
     const routes = [
         {

@@ -33,5 +33,7 @@ module.exports = function (parent) {
 
     //role模块
     app.get('/getRoutes', role.getRoutes)
+    app.post('/role/add', role.add)
+    app.put('/role/:id', role.update)
     parent.use(app)
 }

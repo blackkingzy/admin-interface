@@ -1,4 +1,4 @@
-const whiteList = ['/user/login', '/user/logout','/permission/getRoutes']
+const whiteList = ['/user/login', '/user/logout']
 const token = require('../../utils/token')
 exports.userTokenVerify = function (req, res, next) {
     //这里不仅要对某些全匹配接口放开，还要对图片请求放开
